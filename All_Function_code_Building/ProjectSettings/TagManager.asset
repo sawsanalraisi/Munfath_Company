@@ -7,6 +7,7 @@ TagManager:
   - SecurityTag
   - Rebort
   - rebortbady
+  - food1Sel
   layers:
   - Default
   - TransparentFX

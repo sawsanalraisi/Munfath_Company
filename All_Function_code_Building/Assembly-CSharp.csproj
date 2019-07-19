@@ -61,10 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AutoDoorOpenAndClose.cs" />
-    <Compile Include="Assets\Scripts\BezierFollow.cs" />
     <Compile Include="Assets\Scripts\Interface.cs" />
     <Compile Include="Assets\Scripts\RenderScript.cs" />
-    <Compile Include="Assets\Scripts\Route.cs" />
     <Compile Include="Assets\Scripts\SecurityFunctions.cs" />
     <Compile Include="Assets\Scripts\selectFood.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
