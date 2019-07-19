@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class SecurityFunctions : MonoBehaviour
 {
 
-
     //Security Part
     public Image stop_security;
   //  public GameObject Scan;
@@ -14,8 +13,6 @@ public class SecurityFunctions : MonoBehaviour
     public GameObject ScanG;
     public bool OnceTimeDone = true;
     public float TimeSce=2;
-
-
 
 
     //Rebort Part
@@ -28,6 +25,7 @@ public class SecurityFunctions : MonoBehaviour
 
     Transform Orighinalrebortbady;
     public GameObject rebortbady;
+    public GameObject welcomeRobot;
 
     void Start()
     {
@@ -81,7 +79,7 @@ public class SecurityFunctions : MonoBehaviour
         //Chech the user succefully 
         yield return new WaitForSeconds(6f);
         ScanG.gameObject.SetActive(false);
-
+        DataManger.Instance.IsAllowToOpenDoor = true;
         // Open the Door (check if open or not)
     }
 
@@ -112,10 +110,27 @@ public class SecurityFunctions : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        if(YN==1)
-        MsgYesRebort.gameObject.SetActive(false);
-        else if(YN==2)
+        if (YN == 1)
+        {
+            MsgYesRebort.gameObject.SetActive(false);
+            //bring Rebort 
+            yield return new WaitForSeconds(3f);
+            rebortbady.SetActive(true);
+            yield return new WaitForSeconds(4f);
+            welcomeRobot.SetActive(true);
+            yield return new WaitForSeconds(5f);
+            welcomeRobot.SetActive(false);
+            // Rebort follow camera
+            yield return new WaitForSeconds(6f);
+            rebortbady.transform.SetParent(Camera.main.transform);
+
+        }
+
+        else if (YN == 2)
+        { 
         MsgNoRebort.gameObject.SetActive(false);
+        
+        }
 
 
     }

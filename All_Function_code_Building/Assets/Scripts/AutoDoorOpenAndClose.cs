@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AutoDoorOpenAndClose : MonoBehaviour
 {
+    SecurityFunctions SecurityFunctions;
+
 
     Animator animator;
     bool doorOpen;
@@ -20,8 +22,11 @@ public class AutoDoorOpenAndClose : MonoBehaviour
 
         if (col.gameObject.tag == "Player")
         {
-            doorOpen = true;
-            Doors("Open");
+            if (DataManger.Instance.IsAllowToOpenDoor == true)
+            {
+                doorOpen = true;
+                Doors("Open");
+            }
         }
     }
 
