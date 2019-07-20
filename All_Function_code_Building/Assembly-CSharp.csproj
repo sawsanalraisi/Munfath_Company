@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AutoDoorOpenAndClose.cs" />
+    <Compile Include="Assets\Scripts\CleanerRobot.cs" />
     <Compile Include="Assets\Scripts\DataManger.cs" />
     <Compile Include="Assets\Scripts\Interface.cs" />
     <Compile Include="Assets\Scripts\RenderScript.cs" />
