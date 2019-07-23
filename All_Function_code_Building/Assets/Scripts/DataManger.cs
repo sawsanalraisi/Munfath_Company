@@ -8,6 +8,7 @@ public class DataManger
 
     public bool IsAllowToOpenDoor = false;
 
+    public int FoodId=0;
 
     public static DataManger Instance
     {

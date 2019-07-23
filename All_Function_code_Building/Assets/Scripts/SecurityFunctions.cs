@@ -8,9 +8,9 @@ public class SecurityFunctions : MonoBehaviour
 
     //Security Part
     public Image stop_security;
-  //  public GameObject Scan;
-    public GameObject ScanY;
-    public GameObject ScanG;
+     public GameObject Scan;
+    //public GameObject ScanY;
+    //public GameObject ScanG;
     public bool OnceTimeDone = true;
     public float TimeSce=2;
 
@@ -30,7 +30,7 @@ public class SecurityFunctions : MonoBehaviour
     void Start()
     {
         //need infuture
-        Orighinalrebortbady = GameObject.FindGameObjectWithTag("rebortbady").transform;
+       // Orighinalrebortbady = GameObject.FindGameObjectWithTag("rebortbady").transform;
     }
 
     void Update()
@@ -55,7 +55,7 @@ public class SecurityFunctions : MonoBehaviour
                 NoRebort.onClick.AddListener(NoRebortFun);
             }
 
-          //  OnceTimeDone = false;
+        //   OnceTimeDone = false;
         }
     }
 
@@ -66,19 +66,22 @@ public class SecurityFunctions : MonoBehaviour
         //hide stop security msg
         yield return new WaitForSeconds(2f);
         stop_security.gameObject.SetActive(false);
-        ScanY.gameObject.SetActive(true);
+        //Here Scanner start
+        Scan.SetActive(true);
+       // ScanY.gameObject.SetActive(true);
 
 
         //Scan the user (red)
-         yield return new WaitForSeconds(4f);
+         //yield return new WaitForSeconds(4f);
         //Scan change color(green)
-        ScanY.gameObject.SetActive(false);
-        ScanG.gameObject.SetActive(true);
+       // ScanY.gameObject.SetActive(false);
+        //ScanG.gameObject.SetActive(true);
 
 
         //Chech the user succefully 
-        yield return new WaitForSeconds(6f);
-        ScanG.gameObject.SetActive(false);
+        yield return new WaitForSeconds(10f);
+        Scan.SetActive(false);
+        // ScanG.gameObject.SetActive(false);
         DataManger.Instance.IsAllowToOpenDoor = true;
         // Open the Door (check if open or not)
     }

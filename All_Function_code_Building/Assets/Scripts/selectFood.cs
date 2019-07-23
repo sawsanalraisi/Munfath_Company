@@ -1,85 +1,106 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class selectFood : MonoBehaviour
 {
 
-    public GameObject food1;
-    public GameObject food2;
-    public GameObject food3;
+    public GameObject FoodMenuScreen;
 
-    public bool IsFood = false;
+    public Button[] foodBtn;
+    public GameObject[] foods;
+
+    //  public Button LeftFoodBtn;
+    //  public Button RightFoodBtn;
+
+    void Start()
+    {
+        // LeftFoodBtn.onClick.AddListener(LeftFood);
+        //  RightFoodBtn.onClick.AddListener(RightFood);
+        foodBtn[0].onClick.AddListener(foodBtn1);
+        foodBtn[1].onClick.AddListener(foodBtn2);
+        foodBtn[2].onClick.AddListener(foodBtn3);
+        foodBtn[3].onClick.AddListener(foodBtn4);
+
+    }
+
+
     // Update is called once per frame
     void Update()
     {
 
-        if(Input.GetMouseButtonDown(0))
-        {     
-       
-         RaycastHit hit;
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit,150f))
-            {
-
-                // show spisific distance 
-
-                if (IsFood == false)
+        if (Physics.Raycast(ray, out hit, 150f))
+        {
+                //eat the food
+                if (hit.transform.name == "food0")
                 {
-
-                    if (hit.transform.name == "food1Sel")
-                    {
-                        food1.SetActive(true);
-                        food1.transform.position = new Vector3(-42.3f, 15.7f, 11.7f);
-                        IsFood = true;
-                        print("Have a good meal");
-                    }
-                    else if (hit.transform.name == "food2Sel")
-                    {
-                        food2.SetActive(true);
-                        food2.transform.position = new Vector3(-42.3f, 15.7f, 11.7f);
-                        IsFood = true;
-                        print("Have a good meal");
-                    }
-                    else if (hit.transform.name == "food3Sel")
-                    {
-                        food3.SetActive(true);
-                        food3.transform.position = new Vector3(-42.3f, 15.7f, 11.7f);
-                        IsFood = true;
-                        print("Have a good meal");
-                    }
-
+                    foods[0].SetActive(false);
                 }
-                else
+                else if (hit.transform.name == "food1")
                 {
-                    if (hit.transform.name == "food1")
-                    {
-                        food1.SetActive(false);
-                        IsFood = false;
-
-                    }
-                    else if (hit.transform.name == "food2")
-                    {
-                        food2.SetActive(false);
-                        IsFood = false;
-
-                    }
-                    else if (hit.transform.name == "food3")
-                    {
-                        food3.SetActive(false);
-                        IsFood = false;
-
-                    }
-
-
+                    foods[1].SetActive(false);
+                }
+                else if (hit.transform.name == "food2")
+                {
+                    foods[2].SetActive(false);
+                }
+                else if (hit.transform.name == "food3")
+                {
+                    foods[3].SetActive(false);
                 }
 
             }
 
         }
+
     }
+
+ 
+
+
+    //select food
+    public void foodBtn1()
+    {
+        foods[0].gameObject.SetActive(true);
+    }
+    public void foodBtn2()
+    {
+        foods[1].gameObject.SetActive(true);
+    }
+    public void foodBtn3()
+    {
+        foods[2].gameObject.SetActive(true);
+    }
+    public void foodBtn4()
+    {
+        foods[3].gameObject.SetActive(true);
+    }
+
+
+   
+    //show Screen
+
+    void OnTriggerEnter(Collider other)
+    {
+
+    if (other.gameObject.tag == "FoodScreen")
+    {
+        FoodMenuScreen.SetActive(true);
+    }
+    else 
+    {
+     FoodMenuScreen.SetActive(false);
+     }
+    }
+
+
 }
+
 
 
 
@@ -87,39 +108,39 @@ public class selectFood : MonoBehaviour
 
 void EatFoodFun()
 {
-    if (Input.GetMouseButtonDown(0))
+if (Input.GetMouseButtonDown(0))
+{
+
+    RaycastHit hit;
+    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+    if (Physics.Raycast(ray, out hit))
     {
 
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit))
+        if (IsFood == true)
         {
 
-            if (IsFood == true)
+            if (hit.transform.name == "food1")
             {
-
-                if (hit.transform.name == "food1")
-                {
-                    food1.SetActive(false);
-                    IsFood = false;
-                }
-                else if (hit.transform.name == "food2")
-                {
-                    food2.SetActive(false);
-                    IsFood = false;
-
-
-                }
-                else if (hit.transform.name == "food2")
-                {
-                    food3.SetActive(false);
-                    IsFood = false;
-                }
+                food1.SetActive(false);
+                IsFood = false;
             }
+            else if (hit.transform.name == "food2")
+            {
+                food2.SetActive(false);
+                IsFood = false;
 
+
+            }
+            else if (hit.transform.name == "food2")
+            {
+                food3.SetActive(false);
+                IsFood = false;
+            }
         }
+
     }
+}
 }*/
 
 

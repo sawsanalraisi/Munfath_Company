@@ -8,6 +8,7 @@ TagManager:
   - Rebort
   - rebortbady
   - food1Sel
+  - FoodScreen
   layers:
   - Default
   - TransparentFX
