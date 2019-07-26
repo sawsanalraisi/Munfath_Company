@@ -1,9 +1,10 @@
 ﻿<Properties StartupConfiguration="{580A690C-6229-6A29-3A0A-A2A411004A8D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/selectFood.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SecurityFunctions.cs">
     <Files>
-      <File FileName="Assets/Scripts/selectFood.cs" Line="100" Column="5" />
-      <File FileName="Assets/Scripts/DataManger.cs" Line="11" Column="24" />
-      <File FileName="Assets/Scripts/SecurityFunctions.cs" Line="16" Column="5" />
+      <File FileName="Assets/Scripts/MathParabola.cs" Line="3" Column="26" />
+      <File FileName="Assets/Scripts/ParabolaController.cs" Line="368" Column="2" />
+      <File FileName="Assets/Scripts/Script_Logo.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/SecurityFunctions.cs" Line="29" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

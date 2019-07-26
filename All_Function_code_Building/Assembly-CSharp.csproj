@@ -71,10 +71,19 @@
     <Compile Include="Assets\Scripts\CleanerRobot.cs" />
     <Compile Include="Assets\Scripts\DataManger.cs" />
     <Compile Include="Assets\Scripts\Interface.cs" />
+    <Compile Include="Assets\Scripts\MathParabola.cs" />
+    <Compile Include="Assets\Scripts\ParabolaController.cs" />
     <Compile Include="Assets\Scripts\RenderScript.cs" />
     <Compile Include="Assets\Scripts\Route.cs" />
+    <Compile Include="Assets\Scripts\Script_Logo.cs" />
     <Compile Include="Assets\Scripts\SecurityFunctions.cs" />
     <Compile Include="Assets\Scripts\selectFood.cs" />
+    <Compile Include="Assets\Testing\Scene\CameraLookAt.cs" />
+    <Compile Include="Assets\Testing\Scripts\Classes\Point.cs" />
+    <Compile Include="Assets\Testing\Scripts\Classes\WaypointUtility.cs" />
+    <Compile Include="Assets\Testing\Scripts\WaypointAgent.cs" />
+    <Compile Include="Assets\Testing\Scripts\WaypointData.cs" />
+    <Compile Include="Assets\Testing\Scripts\WaypointManager.cs" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_TransparentOverlay.shader" />
     <None Include="Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\README.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SelectionPicker.shader" />
@@ -98,19 +107,19 @@
     <None Include="Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -313,29 +322,29 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
-    <Reference Include="ProBuilderCore-Unity5">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
-    </Reference>
     <Reference Include="ProBuilderMeshOps-Unity5">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Assets/ProCore/ProBuilder/Classes/ProBuilderMeshOps-Unity5.dll</HintPath>
     </Reference>
-    <Reference Include="KdTreeLib">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
+    <Reference Include="ProBuilderCore-Unity5">
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Assets/ProCore/ProBuilder/Classes/ProBuilderCore-Unity5.dll</HintPath>
     </Reference>
     <Reference Include="pb_Stl">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Assets/ProCore/ProBuilder/Classes/ClassesLib/pb_Stl.dll</HintPath>
+    </Reference>
+    <Reference Include="KdTreeLib">
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Assets/ProCore/ProBuilder/Classes/ClassesLib/KdTreeLib.dll</HintPath>
     </Reference>
     <Reference Include="Poly2Tri">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.Editor">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Assets/ProCore/ProBuilder/Classes/ClassesLib/Poly2Tri.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>/Users/a/Desktop/Munfath_Company/All_Function_code_Building/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Editor">
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>/Users/sawsanalraisi/Desktop/github/All_Function_code_Building/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
