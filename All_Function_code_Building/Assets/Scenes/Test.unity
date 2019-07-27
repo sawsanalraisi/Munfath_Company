@@ -2253,7 +2253,7 @@ GameObject:
   - component: {fileID: 607882148}
   m_Layer: 0
   m_Name: Robot
-  m_TagString: Rebort
+  m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2309,7 +2309,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 607882146}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2703,7 +2703,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734425539}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4151,7 +4151,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1227024796}
-  - component: {fileID: 1227024795}
   m_Layer: 0
   m_Name: RobotBody
   m_TagString: RobotBody
@@ -4159,29 +4158,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1227024795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227024794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d283370aacbe46438fcb96a3ed5dd9a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 593265063}
-  - {fileID: 436310443}
-  - {fileID: 1688374842}
-  - {fileID: 162957363}
-  - {fileID: 1052700453}
-  - {fileID: 1146829147}
-  - {fileID: 1942339520}
-  IsMoveRobot: 1
-  Robot: {fileID: 1227024794}
-  OnceTimeDone: 1
 --- !u!4 &1227024796
 Transform:
   m_ObjectHideFlags: 0
@@ -5979,6 +5955,7 @@ GameObject:
   - component: {fileID: 2000511303}
   - component: {fileID: 2000511302}
   - component: {fileID: 2000511307}
+  - component: {fileID: 2000511308}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5994,7 +5971,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000511300}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 4.32}
+  m_LocalPosition: {x: -0, y: 0, z: 72.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 511933964}
@@ -6032,7 +6009,17 @@ MonoBehaviour:
   Scan: {fileID: 1229955718}
   OnceTimeDone: 1
   TimeSce: 2
-  Waypointsrobot: {fileID: 0}
+  waypoints:
+  - {fileID: 593265063}
+  - {fileID: 436310443}
+  - {fileID: 1688374842}
+  - {fileID: 162957363}
+  - {fileID: 1052700453}
+  - {fileID: 1146829147}
+  - {fileID: 1942339520}
+  - {fileID: 1402667235}
+  IsMoveRobot: 1
+  Robot: {fileID: 1227024794}
 --- !u!65 &2000511304
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6114,6 +6101,30 @@ MonoBehaviour:
   - {fileID: 332507581}
   - {fileID: 118609232}
   - {fileID: 396133329}
+--- !u!114 &2000511308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000511300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e31f97c54ac044c23b00dbe52adb5a64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 593265063}
+  - {fileID: 436310443}
+  - {fileID: 1688374842}
+  - {fileID: 162957363}
+  - {fileID: 1052700453}
+  - {fileID: 1146829147}
+  - {fileID: 1942339520}
+  - {fileID: 1402667235}
+  IsMoveRobot: 1
+  Robot: {fileID: 1227024794}
+  OnceTimeDone: 1
 --- !u!1 &2133101184
 GameObject:
   m_ObjectHideFlags: 0

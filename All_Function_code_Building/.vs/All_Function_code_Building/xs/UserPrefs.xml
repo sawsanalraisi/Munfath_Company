@@ -1,11 +1,5 @@
 ﻿<Properties StartupConfiguration="{580A690C-6229-6A29-3A0A-A2A411004A8D}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WaypointController.cs">
-    <Files>
-      <File FileName="Assets/Scripts/WaypointController.cs" Line="97" Column="17" />
-      <File FileName="Assets/Scripts/Cleaner_Robot_Dirty.cs" Line="30" Column="2" />
-      <File FileName="Assets/Scripts/SecurityFunctions.cs" Line="14" Column="29" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />

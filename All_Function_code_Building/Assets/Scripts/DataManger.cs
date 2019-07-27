@@ -10,6 +10,8 @@ public class DataManger
 
     public int FoodId=0;
 
+    public bool IsAllowToMoveRobot = false;
+
     public static DataManger Instance
     {
         get

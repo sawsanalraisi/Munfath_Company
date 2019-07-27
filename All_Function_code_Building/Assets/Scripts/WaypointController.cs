@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class WaypointController : MonoBehaviour {
 
+
     public List<Transform> waypoints = new List<Transform>();
     private Transform targetWaypoint;
     private int targetWaypointIndex = 0;
     private float minDistance = 0.1f; //If the distance between the enemy and the waypoint is less than this, then it has reacehd the waypoint
     private int lastWaypointIndex;
-
    // private float movementSpeed = 5.0f;
     private float movementSpeed = 10f;
-
     private float rotationSpeed = 2.0f;
-
     public bool IsMoveRobot = true;
 
     //Robot
@@ -66,8 +64,6 @@ public class WaypointController : MonoBehaviour {
         }
     }
 
-
-
     /// <summary>
     /// Checks to see if the enemy is within distance of the waypoint. If it is, it called the UpdateTargetWaypoint function 
     /// </summary>
@@ -90,28 +86,14 @@ public class WaypointController : MonoBehaviour {
         {
             targetWaypointIndex = 0;
 
-            if(Robot.name== "RobotBody")
-            {
-                IsMoveRobot = false;
-            }
             if (Robot.name == "Robot_clearner_Body")
             {
                 IsMoveRobot = true;
             }
-
         }
 
         targetWaypoint = waypoints[targetWaypointIndex];
     }
-
-
-
-
-
-
-
-
-
 
 
 }

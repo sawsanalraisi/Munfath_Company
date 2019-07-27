@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\SecurityFunctions.cs" />
     <Compile Include="Assets\Scripts\selectFood.cs" />
     <Compile Include="Assets\Scripts\WaypointController.cs" />
+    <Compile Include="Assets\Scripts\WaypointControllerOnce.cs" />
     <Compile Include="Assets\Testing\Scene\CameraLookAt.cs" />
     <Compile Include="Assets\Testing\Scripts\Classes\Point.cs" />
     <Compile Include="Assets\Testing\Scripts\Classes\WaypointUtility.cs" />

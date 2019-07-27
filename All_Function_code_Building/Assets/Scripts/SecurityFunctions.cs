@@ -15,15 +15,25 @@ public class SecurityFunctions : MonoBehaviour
     public float TimeSce=2;
 
 
-    //Robot Part
 
-        public GameObject Waypointsrobot;
+    //Robot Part
+    public List<Transform> waypoints = new List<Transform>();
+    private Transform targetWaypoint;
+    private int targetWaypointIndex = 0;
+    private float minDistance = 0.1f; //If the distance between the enemy and the waypoint is less than this, then it has reacehd the waypoint
+    private int lastWaypointIndex;
+    // private float movementSpeed = 5.0f;
+    private float movementSpeed = 10f;
+    private float rotationSpeed = 2.0f;
+    public bool IsMoveRobot = true;
+    public GameObject Robot;//once
+
 
 
     void Start()
     {
-     
 
+      
     }
 
     void Update()
@@ -39,31 +49,21 @@ public class SecurityFunctions : MonoBehaviour
     {
         if (OnceTimeDone == true)
         {
-            if (other.gameObject.tag == "SecurityTag")
+             if (other.gameObject.tag == "SecurityTag")
             {
                 //show stop security msg
                 stop_security.gameObject.SetActive(true);
                 StartCoroutine(SecurityFun());
             }
+           
 
-            if (other.gameObject.tag == "Rebort")
-            {
-
-
-                //welcome use (sound)
-                //tall the use to check heath 
-                //show heath report 
-                StartCoroutine(MsgWaitRebort());
-
-               
-            }
-
-        //   OnceTimeDone = false;
+        //OnceTimeDone = false; //once time done functions
         }
     }
 
-   
+  
 
+    //Security 
     IEnumerator SecurityFun()
     {
         //hide stop security msg
@@ -83,22 +83,5 @@ public class SecurityFunctions : MonoBehaviour
 
 
 
-   
-
-
-    IEnumerator MsgWaitRebort()
-    {
-        yield return new WaitForSeconds(3f);
-        //bring Rebort 
-        yield return new WaitForSeconds(3f);
-            yield return new WaitForSeconds(4f);
-            yield return new WaitForSeconds(5f);
-            // Rebort follow camera
-            yield return new WaitForSeconds(6f);
-
-       
-
-
-    }
-
+  
 }
