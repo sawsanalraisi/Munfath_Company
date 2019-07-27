@@ -9,6 +9,8 @@ TagManager:
   - rebortbady
   - food1Sel
   - FoodScreen
+  - RobotBody
+  - Robot_clearner_Body
   layers:
   - Default
   - TransparentFX
