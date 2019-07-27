@@ -9,6 +9,8 @@ public class SecurityFunctions : MonoBehaviour
     //Security Part
     public Image stop_security;
      public GameObject Scan;
+     public GameObject ScanG;
+
     //public GameObject ScanY;
     //public GameObject ScanG;
     public bool OnceTimeDone = true;
@@ -26,6 +28,7 @@ public class SecurityFunctions : MonoBehaviour
     private float movementSpeed = 10f;
     private float rotationSpeed = 2.0f;
     public bool IsMoveRobot = true;
+
     public GameObject Robot;//once
 
 
@@ -69,13 +72,14 @@ public class SecurityFunctions : MonoBehaviour
         //hide stop security msg
         yield return new WaitForSeconds(2f);
         stop_security.gameObject.SetActive(false);
-
         //Here Scanner start
         Scan.SetActive(true);
-
         //Chech the user succefully 
         yield return new WaitForSeconds(10f);
         Scan.SetActive(false);
+        ScanG.SetActive(true);
+        yield return new WaitForSeconds(10f);
+        ScanG.SetActive(false);
 
         // Open the Door 
         DataManger.Instance.IsAllowToOpenDoor = true;

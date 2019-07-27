@@ -1,5 +1,12 @@
 ﻿<Properties StartupConfiguration="{580A690C-6229-6A29-3A0A-A2A411004A8D}|">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/AudioScript.cs">
+    <Files>
+      <File FileName="Assets/Scripts/selectFood.cs" Line="59" Column="10" />
+      <File FileName="Assets/Scripts/SecurityFunctions.cs" Line="30" Column="28" />
+      <File FileName="Assets/Scripts/WaypointControllerOnce.cs" Line="49" Column="64" />
+      <File FileName="Assets/Scripts/AudioScript.cs" Line="15" Column="31" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />

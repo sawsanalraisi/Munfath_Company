@@ -46,6 +46,7 @@ public class WaypointControllerOnce : MonoBehaviour
 
                 DataManger.Instance.IsAllowToMoveRobot = true;
                 MoveRobotFun();
+                Robot.transform.parent = Camera.main.transform;
                 //welcome use (sound)
                 //tall the use to check heath 
                 //show heath report 
