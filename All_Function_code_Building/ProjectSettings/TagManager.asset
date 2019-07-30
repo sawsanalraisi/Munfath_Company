@@ -5,10 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - SecurityTag
-  - Rebort
-  - rebortbady
   - food1Sel
   - FoodScreen
+  - RobotBody
+  - Robot_clearner_Body
+  - Robot
   layers:
   - Default
   - TransparentFX
