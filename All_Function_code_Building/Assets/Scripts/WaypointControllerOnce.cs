@@ -63,14 +63,15 @@ public class WaypointControllerOnce : MonoBehaviour
         if (IsMoveRobot == true)
         {
             float movementStep = movementSpeed * Time.deltaTime;
-            //float rotationStep = rotationSpeed * Time.deltaTime;
+          //  float rotationStep = rotationSpeed * Time.deltaTime;
 
             //Vector3 directionToTarget = targetWaypoint.position - transform.position;
             Vector3 directionToTarget = targetWaypoint.position - Robot.transform.position;
-
+           // Quaternion rotationToTarget = Quaternion.LookRotation(Camera.main.transform.position);
             Quaternion rotationToTarget = Quaternion.LookRotation(directionToTarget);
 
-            //transform.rotation = Quaternion.Slerp(transform.rotation, rotationToTarget, rotationStep); 
+
+           //transform.rotation = Quaternion.Slerp(transform.rotation, rotationToTarget, rotationStep); 
 
             /*
             transform.rotation = rotationToTarget;
@@ -90,7 +91,7 @@ public class WaypointControllerOnce : MonoBehaviour
             CheckDistanceToWaypoint(distance);
 
             Robot.transform.position = Vector3.MoveTowards(Robot.transform.position, targetWaypoint.position, movementStep);
-
+            //Robot.transform.LookAt(directionToTarget);
         }
     }
 
@@ -103,6 +104,10 @@ public class WaypointControllerOnce : MonoBehaviour
         if (currentDistance <= minDistance)
         {
             targetWaypointIndex++;
+            if (targetWaypointIndex == 1)
+            {
+                Robot.transform.Rotate(0,-90,0);
+            }
             UpdateTargetWaypoint();
         }
     }

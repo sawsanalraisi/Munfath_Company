@@ -7,6 +7,7 @@ public class selectFood : MonoBehaviour
 {
 
     public GameObject FoodMenuScreen;
+    public GameObject MachineFood;
 
     public Button[] foodBtn;
     public GameObject[] foods;
@@ -31,28 +32,31 @@ public class selectFood : MonoBehaviour
     {
 
         if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
+        { 
+        RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, 150f))
+        if (Physics.Raycast(ray, out hit,150f))
         {
+
                 //eat the food
-                if (hit.transform.name == "food0")
-                {
-                    foods[0].SetActive(false);
-                }
-                else if (hit.transform.name == "food1")
-                {
-                    foods[1].SetActive(false);
-                }
-                else if (hit.transform.name == "food2")
-                {
-                    foods[2].SetActive(false);
-                }
-                else if (hit.transform.name == "food3")
-                {
-                    foods[3].SetActive(false);
-                }
+                  if (hit.transform.name == "food0")
+                  {
+                      foods[0].SetActive(false);
+                  }
+                  else if (hit.transform.name == "food1")
+                  {
+                      foods[1].SetActive(false);
+                  }
+                  else if (hit.transform.name == "food2")
+                  {
+                      foods[2].SetActive(false);
+                  }
+                  else if (hit.transform.name == "food3")
+                  {
+                      foods[3].SetActive(false);
+                  }
+
+
 
             }
 
@@ -60,7 +64,6 @@ public class selectFood : MonoBehaviour
 
     }
 
- 
 
 
     //select food
@@ -90,9 +93,13 @@ public class selectFood : MonoBehaviour
 
     if (other.gameObject.tag == "FoodScreen")
     {
-        FoodMenuScreen.SetActive(true);
-    }
-    else 
+            FoodMenuScreen.SetActive(true);
+            FoodMenuScreen.transform.parent = MachineFood.transform;
+
+            // Instantiate(FoodMenuScreen, FindObjectOfType<Canvas>().transform).GetComponent<GameObject>();
+            //FoodMenuScreen.transform.position = Camera.main.WorldToScreenPoint(FoodMenuScreen.transform.position+new Vector3(0f,0f,0f));
+        }
+        else 
     {
      FoodMenuScreen.SetActive(false);
      }

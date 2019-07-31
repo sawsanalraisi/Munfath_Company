@@ -7,14 +7,16 @@ public class Cleaner_Robot_Dirty : MonoBehaviour
     [SerializeField]
     GameObject Dirty;
 
-    float DirtyTimer = 3;
+    float DirtyTimer = 1;
 
-    List<GameObject> allDirtys;
+    public GameObject DirtyRobot;
+
+   // List<GameObject> allDirtys;
 
     // Start is called before the first frame update
     void Start()
     {
-        allDirtys = new List<GameObject>();
+       // allDirtys = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -23,10 +25,24 @@ public class Cleaner_Robot_Dirty : MonoBehaviour
         DirtyTimer -= Time.deltaTime;
         if (DirtyTimer <= 0)
         {
-            DirtyTimer = 3;
-            allDirtys.Add(Instantiate(Dirty, new Vector3(Random.Range(-978f, -0.16f), -72.9f, Random.Range(-1268, -0.16f)), Dirty.transform.rotation));
-        }
-    }
- 
+            DirtyTimer = 1;
+            //allDirtys.Add(Instantiate(Dirty, new Vector3(Random.Range(62.7f, 62.7f), -20.5f, Random.Range(201.5f, 201.5f)), Dirty.transform.rotation));
+            Instantiate(Dirty, new Vector3(Random.Range(-62.7f,-62.7f), -20.5f, Random.Range(201.5f, 201.5f)), Dirty.transform.rotation);
 
+        }
+
+    }
+
+
+    void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag == "Dirty")
+        {
+             DirtyRobot.transform.position = Dirty.transform.position;
+                Destroy(gameObject);
+        }
+
+
+    }
 }

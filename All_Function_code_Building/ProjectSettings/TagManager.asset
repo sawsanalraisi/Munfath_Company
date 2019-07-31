@@ -10,6 +10,8 @@ TagManager:
   - RobotBody
   - Robot_clearner_Body
   - Robot
+  - Foods
+  - Dirty
   layers:
   - Default
   - TransparentFX

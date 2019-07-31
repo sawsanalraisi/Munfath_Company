@@ -63,6 +63,6 @@ public class Interface : MonoBehaviour
 
     public void StartFun()
     {
-        SceneManager.LoadScene("Functions");
+        SceneManager.LoadScene("Test");
     }
 }

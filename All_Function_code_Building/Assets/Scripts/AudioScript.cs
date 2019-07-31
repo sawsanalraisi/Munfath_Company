@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,10 +17,12 @@ public class AudioScript : MonoBehaviour
     public AudioClip start_Surface;
     public AudioClip CreateBuilding;
 
+    
     public AudioClip ScanUser;
+    
+    // not found
     public AudioClip OpenDoor;
     public AudioClip CloseDoor;
-
     public AudioClip RobotMoveSound;
     public AudioClip RobotWelcome;
     public AudioClip ScanHealthUser;
@@ -29,7 +31,7 @@ public class AudioScript : MonoBehaviour
     public AudioClip MakeFood;
     public AudioClip EatFood;
     public AudioClip ClearMachine;
-
+    public AudioClip PeopleSound;
 
     void Awake()
 
@@ -108,6 +110,9 @@ public class AudioScript : MonoBehaviour
                 myAudio.clip = ClearMachine;
                 break;
                
+               case "PeopleSound":
+               myAudio.clip = PeopleSound;
+               break;
         }
 
         myAudio.Play();
